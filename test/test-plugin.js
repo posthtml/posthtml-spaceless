@@ -21,7 +21,7 @@ test('should return promise', t => {
 	t.true(isPromise(processing('')));
 });
 
-test('should clone to attribute css module', async t => {
+test('should remove whitespace between html tags', async t => {
 	const fixture = `
 		<!DOCTYPE html>
 		<html>
@@ -45,6 +45,36 @@ test('should clone to attribute css module', async t => {
 			<body>
 				<h2>Header</h2>
 				<ul><li>one</li><li>two</li><li>three</li></ul>
+			</body>
+		</html>`;
+
+	t.deepEqual(expected, (await processing(fixture)).html);
+});
+
+test('should remove space only between tags', async t => {
+	const fixture = `
+		<!DOCTYPE html>
+		<html>
+			<head></head>
+			<body>
+				<h2>Header</h2>
+				<spaceless>
+				<strong>
+					Hello
+				</strong>
+				</spaceless>
+			</body>
+		</html>`;
+
+	const expected = `
+		<!DOCTYPE html>
+		<html>
+			<head></head>
+			<body>
+				<h2>Header</h2>
+				<strong>
+					Hello
+				</strong>
 			</body>
 		</html>`;
 
