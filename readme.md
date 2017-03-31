@@ -22,12 +22,12 @@ npm i -D posthtml posthtml-spaceless
 ```js
 import {readFileSync, writeFileSync} from 'fs';
 import posthtml from 'posthtml';
-import clone from 'posthtml-spaceless';
+import spaceless from 'posthtml-spaceless';
 
 const html = readFileSync('input.html', 'utf8');
 
 posthtml()
-    .use(clone())
+    .use(spaceless())
     .process(html)
     .then(result => {
         writeFileSync('output.html', result.html);
