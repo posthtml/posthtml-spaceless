@@ -24,8 +24,7 @@
     "major": "np major --any-branch",
     "test": "nyc ava",
     "build": "rimraf lib && babel src -d lib",
-    "prepublish": "npm run build",
-    "update": "updtr && ava-codemods --force"
+    "prepare": "npm run build"
   },
   "files": [
     "lib"
