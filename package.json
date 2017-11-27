@@ -62,7 +62,7 @@
     "eslint-plugin-ava": "^4.3.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-markdown": "^1.0.0-beta.7",
-    "eslint-plugin-xo": "^1.0.0",
+    "eslint-plugin-unicorn": "^3.0.0",
     "husky": "^0.14.3",
     "is-promise": "^2.1.0",
     "np": "^2.6.0",
@@ -94,13 +94,12 @@
     "parser": "babel-eslint",
     "plugins": [
       "ava",
-      "xo",
+      "unicorn",
       "babel",
       "markdown"
     ],
     "extends": [
       "xo",
-      "plugin:xo/recommended",
       "plugin:ava/recommended"
     ]
   },
