@@ -25,8 +25,7 @@
     "minor": "np minor --any-branch",
     "major": "np major --any-branch",
     "test": "nyc ava",
-    "clean": "rm -rf lib && mkdir lib",
-    "build": "npm run clean && babel src/ -d lib/",
+    "build": "rimraf lib && babel src -d lib",
     "prepublish": "npm run build",
     "update": "updtr && ava-codemods --force",
     "testen": "testen -n -- ava"
@@ -67,7 +66,8 @@
     "is-promise": "^2.1.0",
     "np": "^2.6.0",
     "nyc": "^11.3.0",
-    "posthtml": "^0.10.1"
+    "posthtml": "^0.10.1",
+    "rimraf": "^2.6.2"
   },
   "ava": {
     "require": [
