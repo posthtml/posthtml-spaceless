@@ -14,7 +14,7 @@ test('plugin must be function', t => {
 });
 
 test('should return reject', async t => {
-	t.throws(spaceless()());
+	await t.throws(spaceless()());
 });
 
 test('should return promise', t => {
