@@ -3,14 +3,9 @@
   "version": "0.0.2",
   "description": "A posthtml plugin remove whitespace between HTML tags",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GitScrum/posthtml-spaceless.git"
-  },
-  "homepage": "https://github.com/GitScrum/posthtml-spaceless#readme",
-  "bugs": {
-    "url": "https://github.com/GitScrum/posthtml-spaceless/issues"
-  },
+  "repository": "GitScrum/posthtml-spaceless",
+  "homepage": "GitScrum/posthtml-spaceless#readme",
+  "bugs": "GitScrum/posthtml-spaceless/issues",
   "author": {
     "name": "Ivan Demidov",
     "email": "Scrum@list.ru",
