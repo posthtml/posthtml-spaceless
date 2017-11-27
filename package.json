@@ -19,7 +19,7 @@
     "lintjs": "eslint ./src/*.js ./test/*.js",
     "lintmd": "eslint --ext md --rule indent: [error, 4] .",
     "pretest": "clinton && npm run lintjs && npm run lintmd",
-    "commitmsg": "conventional-changelog-lint -e",
+    "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
     "postpublish": "conventional-changelog -i CHANGELOG.md -s -r 0 && git commit -am \"chore(changelog): Update changelog\"",
     "patch": "np patch --any-branch",
     "minor": "np minor --any-branch",
@@ -45,6 +45,8 @@
     "posthtml-render": "1.0.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^5.1.1",
+    "@commitlint/config-angular": "^5.1.1",
     "ava": "*",
     "babel-cli": "^6.11.4",
     "babel-eslint": "^8.0.2",
