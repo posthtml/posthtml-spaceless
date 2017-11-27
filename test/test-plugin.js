@@ -13,8 +13,8 @@ test('plugin must be function', t => {
 	t.true(typeof spaceless === 'function');
 });
 
-test('should return reject', t => {
-	t.throws(spaceless()());
+test('should return reject', async t => {
+	await t.throws(spaceless()());
 });
 
 test('should return promise', t => {
